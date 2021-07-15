@@ -1,26 +1,21 @@
-export function retrieveData() {
+export function retrieveUsersData() {
   return fetch('http://localhost:3001/api/v1/users')
   .then(response => response.json())
-  .then(apiData => apiData)
-  .catch(err => console.error('not working'))
+}
 
-export function retrieveData() {
+export function retrieveSleepData() {
   return fetch('http://localhost:3001/api/v1/sleep')
   .then(response => response.json())
-  .then(apiData => apiData)
-  .catch(err => console.error('not working'))
+}
 
-export function retrieveData() {
+export function retrieveActivityData() {
   return fetch('http://localhost:3001/api/v1/activity')
   .then(response => response.json())
-  .then(apiData => apiData)
-  .catch(err => console.error('not working'))
+}
 
-export function retrieveData() {
+export function retrieveHydrationData() {
   return fetch('http://localhost:3001/api/v1/hydration')
   .then(response => response.json())
-  .then(apiData => apiData)
-  .catch(err => console.error('not working'))
 };
 
 //retrieveData('sleep');
