@@ -1,4 +1,4 @@
-export function retrieveUsersData() {
+export function usersData() {
   return fetch('http://localhost:3001/api/v1/users')
   .then(response => response.json())
 }
