@@ -3,7 +3,7 @@
 
 // An example of how you tell webpack to use a CSS file
 import './css/styles.css';
-import {usersData} from './webApi.js';
+import {usersData, retrieveSleepData, retrieveActivityData, retrieveHydrationData} from './webApi.js';
 
 // An example of how you tell webpack to use an image (also need to link to it in the index.html)
 import './images/turing-logo.png'
@@ -17,13 +17,13 @@ import UserRepository from './UserRepository';
 let sleepData, userRepoData, hydrationData, activityData;
 
 
-function getUserData() {
-  return usersData()
-  .then(data => {
-    console.log(data);
-  userRepoData = data
-console.log(userRepoData);
-})
-};
-getUserData();
-console.log(userRepoData);
+// function getUserData() {
+//   return usersData()
+//   .then(data => {
+//     console.log(data);
+//   userRepoData = data
+// console.log(userRepoData);
+// })
+// };
+// getUserData();
+// console.log(userRepoData);
