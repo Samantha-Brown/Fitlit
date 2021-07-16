@@ -35,6 +35,9 @@ class Sleep {
     return this.sleepData.filter(aUser => aUser.userID === id)
   }
   selectWeek(id) {
+    // specify the weeklyHours
+    // needs a second param to take in a date and decide from there
+    // could go into a utility
     let week = [];
     let allUserDays = this.findAUser(id);
     allUserDays.forEach((day) => {

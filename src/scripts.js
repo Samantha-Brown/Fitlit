@@ -14,16 +14,29 @@ console.log('This is the JavaScript entry file - your code begins here.');
 
 //import userData from './data/users';
 import UserRepository from './UserRepository';
-let sleepData, userRepoData, hydrationData, activityData;
+import User from './User';
+
+let sleepData, userRepoData, hydrationData, activityData, user;
+
+const grabDataFunction = () => {
+  document.getElementById('h1').innerText = `${user.getFirstName()}`;
+}
+
+usersData()
+  .then(data => {
+    userRepoData = new UserRepository(data.userData);
+    console.log(userRepoData.data[20])
+    user = new User(userRepoData.data[20])
+    console.log(user);
+}).then(grabDataFunction);
 
 
-// function getUserData() {
-//   return usersData()
-//   .then(data => {
-//     console.log(data);
-//   userRepoData = data
-// console.log(userRepoData);
-// })
-// };
-// getUserData();
-// console.log(userRepoData);
+
+
+
+  // console.log(data.userData);
+  //need to call class methods with this data
+  // user and userRepo data are both scoped inside of this function
+  // .forEach((user) => {
+  //   userRepoShit.push(user);
+  // })
