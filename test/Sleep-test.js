@@ -134,9 +134,9 @@ describe.only('Sleep', () => {
   }
 ];
     const sleep = new Sleep(sleepData);
-    expect(sleep.getAverageSleepQuality(2)).to.equal(4.7);
-    expect(sleep.getAverageSleepQuality(3)).to.equal(4.7);
-    expect(sleep.getAverageSleepQuality(1)).to.equal(2.2);
+    expect(sleep.getAverageUserSleepQuality(2)).to.equal(4.7);
+    expect(sleep.getAverageUserSleepQuality(3)).to.equal(4.7);
+    expect(sleep.getAverageUserSleepQuality(1)).to.equal(2.2);
   })
 
   it('should show the user the hours slept for a specific date', () => {
@@ -226,4 +226,47 @@ describe.only('Sleep', () => {
     expect(sleep.getSleepQualityByDate(1, "2019/06/15")).to.equal(2.2);
     expect(sleep.getSleepQualityByDate(2, "2019/06/16")).to.equal(4.7);
   })
+
+  it.only('should show the average sleep quality of all user\'s', () => {
+    const sleepData = [
+      {
+    "userID": 1,
+    "date": "2019/06/15",
+    "hoursSlept": 6.1,
+    "sleepQuality": 2.2
+  },
+  {
+    "userID": 2,
+    "date": "2019/06/15",
+    "hoursSlept": 7,
+    "sleepQuality": 4.7
+  },
+  {
+    "userID": 3,
+    "date": "2019/06/15",
+    "hoursSlept": 10.8,
+    "sleepQuality": 4.7
+  },
+  {
+    "userID": 1,
+    "date": "2019/06/16",
+    "hoursSlept": 6.1,
+    "sleepQuality": 2.2
+  },
+  {
+    "userID": 2,
+    "date": "2019/06/16",
+    "hoursSlept": 7,
+    "sleepQuality": 4.7
+  },
+  {
+    "userID": 3,
+    "date": "2019/06/16",
+    "hoursSlept": 10.8,
+    "sleepQuality": 4.7
+  }
+];
+    const sleep = new Sleep(sleepData);
+    expect(sleep.getAllUserSleepQualityAvg()).to.equal(4);
+  });
 });
