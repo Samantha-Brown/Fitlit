@@ -20,15 +20,21 @@ let sleepData, userRepoData, hydrationData, activityData, user;
 
 const grabDataFunction = () => {
   document.getElementById('h1').innerText = `${user.getFirstName()}`;
+  // more user stuff here
+  // more dom user stuff here
+  //MORE!!!!
+  // could export this function
 }
-
-usersData()
-  .then(data => {
+//console.log(usersData())
+usersData() // Same as: Promise.then(data =>){}
+  .then((data) => {
     userRepoData = new UserRepository(data.userData);
-    console.log(userRepoData.data[20])
+    // console.log(userRepoData.data[20])
     user = new User(userRepoData.data[20])
-    console.log(user);
+    // console.log(user);
 }).then(grabDataFunction);
+
+retrieveHydrationData()
 
 
 
