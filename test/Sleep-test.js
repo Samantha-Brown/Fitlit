@@ -227,7 +227,7 @@ describe.only('Sleep', () => {
     expect(sleep.getSleepQualityByDate(2, "2019/06/16")).to.equal(4.7);
   })
 
-  it.only('should show the average sleep quality of all user\'s', () => {
+  it('should show the average sleep quality of all user\'s', () => {
     const sleepData = [
       {
     "userID": 1,
@@ -269,4 +269,67 @@ describe.only('Sleep', () => {
     const sleep = new Sleep(sleepData);
     expect(sleep.getAllUserSleepQualityAvg()).to.equal(4);
   });
+
+  it.only('should show hours slept per day over the course of any given week', () => {
+    const data = [
+      {
+      userID: 1,
+      date: "2019/06/14",
+      hoursSlept: 10.8,
+      sleepQuality: 4.7
+      },
+      {
+      userID: 1,
+      date: "2019/06/15",
+      hoursSlept: 10.8,
+      sleepQuality: 4.7
+      },
+      {
+      userID: 1,
+      date: "2019/06/16",
+      hoursSlept: 10.8,
+      sleepQuality: 4.7
+      },
+      {
+      userID: 1,
+      date: "2019/06/17",
+      hoursSlept: 10.8,
+      sleepQuality: 4.7
+      },
+      {
+      userID: 1,
+      date: "2019/06/18",
+      hoursSlept: 10.8,
+      sleepQuality: 4.7
+      },
+      {
+      userID: 1,
+      date: "2019/06/19",
+      hoursSlept: 10.8,
+      sleepQuality: 4.7
+      },
+      {
+      userID: 1,
+      date: "2019/06/20",
+      hoursSlept: 100,
+      sleepQuality: 1000
+      },
+      {
+      userID: 2,
+      date: "2019/06/20",
+      hoursSlept: 2,
+      sleepQuality: 4.7
+      },
+      {
+      userID: 1,
+      date: "2019/06/21",
+      hoursSlept: 333,
+      sleepQuality: 4.7
+      }
+
+    ]
+    const sleep = new Sleep(data);
+    expect(sleep.findWeeklyHoursSlept(1)).to.deep.equal([10.8, 10.8, 10.8, 10.8, 10.8, 10.8, 100])
+  })
+
 });
