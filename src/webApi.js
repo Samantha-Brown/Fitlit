@@ -18,4 +18,6 @@ export function retrieveHydrationData() {
   .then(response => response.json())
 };
 
+//save links in vars?
+
 //retrieveData('sleep');
