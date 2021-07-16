@@ -9,11 +9,18 @@ class Sleep {
     let avgHours = totalHours/newArr.length
     return avgHours;
   }
-  getAverageSleepQuality(id) {
+  getAverageUserSleepQuality(id) {
     let totalQuality = 0
     let newArr = this.sleepData.filter((sleep) => sleep.userID === id);
     newArr.forEach((sleep) => (totalQuality += sleep.sleepQuality));
     let avgQuality = totalQuality/newArr.length;
+    return avgQuality;
+  }
+  getAllUserSleepQualityAvg() {
+    let totalQuality = 0;
+    let newArr = this.sleepData.filter((sleep) => sleep.userID);
+    newArr.forEach((sleep) => (totalQuality += sleep.sleepQuality));
+    let avgQuality = Math.round(totalQuality/newArr.length);
     return avgQuality;
   }
   getHoursSleptByDate(id, date) {
