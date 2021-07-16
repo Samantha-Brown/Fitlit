@@ -1,6 +1,6 @@
 class Sleep {
   constructor(sleepData) {
-    this.sleepData = sleepData; //[{}, {}, ...,{}]
+    this.sleepData = sleepData;
   }
   getUserAverageHoursSlept(id) {
     let totalHours = 0
@@ -35,21 +35,15 @@ class Sleep {
     return this.sleepData.filter(aUser => aUser.userID === id)
   }
   selectWeek(id) {
-
-    // console.log(this.findAUser(id).slice(-7), '<>>> user guy');
     let week = [];
     let allUserDays = this.findAUser(id);
-    //console.log(allUserDays, 'WEEK<<>>>')
     allUserDays.forEach((day) => {
       if(week.length < 7) {
         week.push(day);
       }
     })
-    //.slice(-7);
-    console.log(week, '<<>>>WEEK<<>>>')
     return week
   }
-
   findWeeklyHoursSlept(id) {
     let week = this.selectWeek(id);
     let weeklyHours = [];
@@ -58,16 +52,14 @@ class Sleep {
     })
     return weeklyHours;
   }
-
-  // findWeeklyHoursSlept(id) {
-  //   this.selectWeek(id);
-  //   let weeklyHours =[];
-  //   this.sleepData.forEach((day) => {
-  //     weeklyHours.push(day.hoursSlept)
-  //   });
-  //   console.log(weeklyHours, '<<>>>> weeklHoursHEREEEEE');
-  //   return weeklyHours;
-  // }
+  findWeeklySleepQuality(id) {
+    let week = this.selectWeek(id);
+    let weeklyHours = [];
+    week.forEach((day) => {
+      weeklyHours.push(day.sleepQuality);
+    })
+    return weeklyHours;
+  }
 }
 
 export default Sleep;
