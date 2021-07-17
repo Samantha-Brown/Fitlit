@@ -12,6 +12,10 @@ class UserRepository {
     this.data.forEach((user) => goals += user.dailyStepGoal)
     return Math.round(goals/this.data.length);
   }
+
+  findAUser(id) {
+    return this.userData.filter(aUser => aUser.userID === id);
+  }
 }
 
 export default UserRepository;

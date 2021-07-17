@@ -25,7 +25,7 @@ describe('User', () => {
     expect(user).to.be.an.instanceOf(User);
   });
 
-  it('should return a user\'s first name only', () => {
+it.only('should return a user\'s first name only', () => {
     const userData = {
       "id": 1,
       "name": "Luisa Hane",
@@ -40,6 +40,8 @@ describe('User', () => {
       ]
     };
     const user = new User(userData);
+    user.findFriendsNames();
     expect(user.getFirstName()).to.equal('Luisa');
   })
 });
+// (4) Mae Connelly (8) Laney Abshire (16) Garnett Cruickshank
