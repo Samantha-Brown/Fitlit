@@ -17,7 +17,3 @@ export function retrieveHydrationData() {
   return fetch('http://localhost:3001/api/v1/hydration')
   .then(response => response.json())
 };
-
-//save links in vars?
-
-//retrieveData('sleep');
