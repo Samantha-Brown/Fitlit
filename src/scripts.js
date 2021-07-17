@@ -14,7 +14,9 @@ const index = getRandomIndex();
 const grabAndImplementUserData = () => {
   document.getElementById('welcomeMessage').innerText = `Welcome, ${user.getFirstName(index)}`;
   document.getElementById('email').innerText = `Email: ${user.email}`;
-  document.getElementById('email').innerText = `Email: ${user.email}`;
+  document.getElementById('address').innerText = `Address: ${user.address}`;
+  document.getElementById('strideLength').innerText = `Stride Length: ${user.strideLength}`;
+  document.getElementById('stepGoal').innerText = `Daily Step Goal: ${user.dailyStepGoal}`;
 };
 
 const forFun = () => {
