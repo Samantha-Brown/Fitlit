@@ -1,3 +1,5 @@
+import UserRepository from './UserRepository';
+
 class User {
   constructor(userData) {
     this.id = userData.id;
