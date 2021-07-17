@@ -5,10 +5,45 @@
     <title>Activity Tracker</title>
   </head>
   <body>
-    <h1 id="h1">Activity Tracker</h1>
-    <h1 id="anotha1">Sleep</h1>
-    <img src="./images/turing-logo.png" alt="turing logo" height="100px" width="100px">
-
+    <header>
+      <h1>Fitlit</h1>
+    </header>
+    <main>
+      <div class="card-wrapper">
+        <h3>User Info</h3>
+        <div class="card">
+          <p id="welcomeMessage">Welcome, </p>
+          <p id="email">Email: </p>
+          <p id="address">Address: </p>
+          <p id="strideLength">Stride Length: </p>
+          <p id="stepGoal">Step Goal: </p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <h3>Hydration Info</h3>
+        <div class="card">
+          <p id="todaysWater">Today's Water: </p>
+          <p id="weekOfWater">This week's water consumed: </p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <h3>Sleep Info</h3>
+        <div class="card">
+          <p id="latestSleepHours">Hours slept last night: </p>
+          <p id="latestSleepQuality">Last night's sleep quality: </p>
+          <p id="hoursOverWeek">Weekly hours: </p>
+          <p id="qualityOverWeek">Weekly quality: </p>
+          <p id="averageHours">Average hours: </p>
+          <p id="averageQuality">Average quality: </p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <h3>Friends</h3>
+        <div class="card">
+          <p id="friends">Your friends: </p>
+        </div>
+      </div>
+    </main>
 <!-- Do not include the scripts.js file here - it is done automatically by the webpack server -->
     <script src="bundle.js"></script>
   </body>
