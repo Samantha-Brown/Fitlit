@@ -6,7 +6,7 @@ class Sleep {
     let totalHours = 0
     let newArr = this.sleepData.filter((sleep) => sleep.userID === id);
     newArr.forEach((sleep) => (totalHours += sleep.hoursSlept));
-    let avgHours = totalHours/newArr.length
+    let avgHours = Math.round(totalHours/newArr.length)
     return avgHours;
   }
   getAverageUserSleepQuality(id) {
