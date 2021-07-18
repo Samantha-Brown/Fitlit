@@ -1,9 +1,9 @@
 import { expect } from 'chai';
 import Hydration from '../src/Hydration';
-import testData from './sampleData';
+import testData from '../src/data/sampleData';
 
 
-describe.only('Hydration', () => {
+describe('Hydration', () => {
   let hydrationData, hydration;
   beforeEach(() => {
     hydrationData = testData.hydrationDataSample;
