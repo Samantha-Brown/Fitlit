@@ -1,6 +1,6 @@
 // *** user sample data for testing***
-
-const userData = [
+testData
+const userDataSample = [
     {
       "id": 1,
       "name": "Luisa Hane",
@@ -136,63 +136,63 @@ const userData = [
         40,
         33
       ]
-    };
+    }];
 
 //***Hydration sample data for testing***
-const hydrationData = [
-  {
-    "userID": 1,
-    "date": "2019/06/15",
-    "numOunces": 37
-  },
+const hydrationDataSample = [
   {
     "userID": 2,
     "date": "2019/06/15",
+    "numOunces": 373737
+  },
+  {
+    "userID": 1,
+    "date": "2019/06/15",
     "numOunces": 75
   },
   {
-    "userID": 3,
-    "date": "2019/06/15",
+    "userID": 1,
+    "date": "2019/06/16",
     "numOunces": 47
   },
   {
-    "userID": 4,
-    "date": "2019/06/15",
+    "userID": 1,
+    "date": "2019/06/17",
     "numOunces": 85
   },
   {
-    "userID": 5,
-    "date": "2019/06/15",
+    "userID": 1,
+    "date": "2019/06/18",
     "numOunces": 42
   },
   {
-    "userID": 6,
-    "date": "2019/06/15",
+    "userID": 1,
+    "date": "2019/06/19",
     "numOunces": 87
   },
   {
-    "userID": 7,
-    "date": "2019/06/15",
+    "userID": 1,
+    "date": "2019/06/20",
     "numOunces": 94
   },
   {
-    "userID": 8,
-    "date": "2019/06/15",
+    "userID": 1,
+    "date": "2019/06/21",
     "numOunces": 84
   },
   {
-    "userID": 9,
-    "date": "2019/06/15",
+    "userID": 1,
+    "date": "2019/06/22",
     "numOunces": 39
   },
   {
-    "userID": 10,
-    "date": "2019/06/15",
+    "userID": 1,
+    "date": "2019/06/23",
     "numOunces": 75
-  };
+  }];
 
   //***Sleep sample data for testing***
-  const sleepData = [
+  const sleepDataSample = [
 
   {
     "userID": 1,
@@ -253,4 +253,6 @@ const hydrationData = [
     "date": "2019/06/15",
     "hoursSlept": 4.4,
     "sleepQuality": 1.6
-  };
+  }];
+
+export default userDataSample, hydrationDataSample, sleepDataSample;

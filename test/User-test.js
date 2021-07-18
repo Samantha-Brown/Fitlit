@@ -1,5 +1,6 @@
 import { expect } from 'chai';
 import User from '../src/User';
+//import userDataSample = require('../src/sampleData/userData');
 
 describe('User', () => {
   let pageUser;
@@ -26,7 +27,7 @@ describe('User', () => {
   it('should be an instance of user', () => {
 
     expect(pageUser).to.be.an.instanceOf(User);
-  });
+  })
 
   it('should store the id of the user', () => {
 
