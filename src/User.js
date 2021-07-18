@@ -13,6 +13,6 @@ class User {
   getFirstName() {
     return this.name.split(' ')[0];
   }
-}
+ }
 
 export default User;
