@@ -7,9 +7,10 @@ import Sleep from './Sleep';
 // import { grabAndImplementUserData } from './updateDOM.js'
 
 let sleepData, userRepoData, hydrationData, user;
+const date = '2020/01/22';
 
 const getRandomIndex = () => {return Math.floor(Math.random() * 50)};
-const index = getRandomIndex();
+const index = getRandomIndex(); // will be the user ID
 
 
 const grabAndImplementUserData = () => {
@@ -20,19 +21,19 @@ const grabAndImplementUserData = () => {
   document.getElementById('stepGoal').innerText = `Daily Step Goal: ${user.dailyStepGoal}`;
 };
 
-const forFun = () => {
-  console.log('hello', '<<<>>>>>FUN')
-}
-
 const grabAndImplementSleepData = () => {
-  document.getElementById('latestSleepHours').innerText = `Last Night's Hour's: ${sleepData.getHoursSleptByDate(id, date)}`
-  document.getElementById('latestSleepQuality').innerText = ``
-  document.getElementById('hoursOverWeek').innerText = ``
-  document.getElementById('qualityOverWeek').innerText = ``
-  document.getElementById('averageQuality').innerText = ``
+  document.getElementById('latestSleepHours').innerText = `Last Night's Hour's: ${sleepData.getHoursSleptByDate(index, date)}`;
+  document.getElementById('latestSleepQuality').innerText = `Last Night's Sleep Quality: ${sleepData.getSleepQualityByDate(index, date)}`;
+  document.getElementById('hoursOverWeek').innerText = `Previous Week's Hours of Sleep: ${sleepData.findWeeklyHours(index, date)}`;
+  document.getElementById('qualityOverWeek').innerText = `Previous Week's Quality of Sleep: ${sleepData.findWeeklyQuality(index, date)}`;
+  document.getElementById('averageQuality').innerText = `All Time Average Sleep Quality: ${sleepData.getAverageUserSleepQuality(index, date)}`;
   document.getElementById('averageHours').innerText = `All Time Average Hours: ${sleepData.getUserAverageHoursSlept(index)}`;
 }
 
+const grabAndImplementHydrationData = () => {
+  document.getElementById('todaysWater').innerText = `Water drank today: ${hydrationData.findByDate(index, date)}`;
+  document.getElementById('weekOfWater').innerText = `This week's water: ${hydrationData.findWeeklyOunces(index, date)}`;
+}
 
 //console.log(usersData())
 retrieveUsersData() // Same as: Promise.then(data =>){}
@@ -51,7 +52,18 @@ retrieveSleepData()
   .then((data) => {
     sleepData = new Sleep(data.sleepData);
     console.log(sleepData);
+    //date = '2020/01/22'   // sleepData[9950].date;
+    console.log(date, '<<>>DATE<<>>')
+
     grabAndImplementSleepData();
+  });
+
+  retrieveHydrationData()
+  .then((data) => {
+    hydrationData = new Hydration(data.hydrationData);
+    //date = '2020/01/22'
+    console.log(hydrationData, "<<<<<HERE>>>>>>");
+    grabAndImplementHydrationData();
   })
 
 
