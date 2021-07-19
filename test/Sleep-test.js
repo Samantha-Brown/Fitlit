@@ -48,6 +48,64 @@ describe('Sleep', () => {
     expect(sleep.getAllUserSleepQualityAvg()).to.equal(3);
   });
 
+  it('should return a user hydration data from their ID', () => {
+
+    expect(sleep.findAUser(4)).to.deep.equal([{
+      "userID": 4,
+      "date": "2019/06/15",
+      "hoursSlept": 5.4,
+      "sleepQuality": 3
+    }])
+  });
+
+  it('should return 7 days', () => {
+
+    expect(sleep.selectWeek(1, "2019/06/22")).to.deep.equal([
+      {
+        "userID": 1,
+        "date": "2019/06/16",
+        "hoursSlept": 6.1,
+        "sleepQuality": 2.2
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/17",
+        "hoursSlept": 7,
+        "sleepQuality": 4.7
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/18",
+        "hoursSlept": 10.8,
+        "sleepQuality": 4.7
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/19",
+        "hoursSlept": 5.4,
+        "sleepQuality": 3
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/20",
+        "hoursSlept": 4.1,
+        "sleepQuality": 3.6
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/21",
+        "hoursSlept": 9.6,
+        "sleepQuality": 2.9
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/22",
+        "hoursSlept": 5.1,
+        "sleepQuality": 2.6
+      },
+    ]);
+  });
+
   it('should show hours slept per day over the course of any given week', () => {
 
     expect(sleep.findWeeklyHours(1, "2019/06/25")).to.deep.equal([5.4, 4.1, 9.6, 5.1, 8.1, 8.9, 4.4])
