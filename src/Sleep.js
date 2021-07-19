@@ -34,34 +34,18 @@ class Sleep {
   findAUser(id) {
     return this.sleepData.filter(aUser => aUser.userID === id)
   }
-  selectWeek(id) {
-    // specify the weeklyHours
-    // needs a second param to take in a date and decide from there
-    // could go into a utility
-    let week = [];
-    let allUserDays = this.findAUser(id);
-    allUserDays.forEach((day) => {
-      if(week.length < 7) {
-        week.push(day);
-      }
-    })
-    return week
+  selectWeek(id, date) {
+    let foundUser = this.findAUser(id);
+    let foundUserObj = foundUser.find((user) => user.date === date);
+    let selection = foundUser.indexOf(foundUserObj) + 1;
+    let foundWeek = foundUser.slice(selection -7, selection);
+    return foundWeek;
   }
-  findWeeklyHoursSlept(id) {
-    let week = this.selectWeek(id);
-    let weeklyHours = [];
-    week.forEach((day) => {
-      weeklyHours.push(day.hoursSlept);
-    })
-    return weeklyHours;
+  findWeeklyHours(id, date) {
+    return this.selectWeek(id, date).map((day) => day.hoursSlept);
   }
-  findWeeklySleepQuality(id) {
-    let week = this.selectWeek(id);
-    let weeklyHours = [];
-    week.forEach((day) => {
-      weeklyHours.push(day.sleepQuality);
-    })
-    return weeklyHours;
+  findWeeklyQuality(id, date) {
+    return this.selectWeek(id, date).map((day) => day.sleepQuality);
   }
 }
 
