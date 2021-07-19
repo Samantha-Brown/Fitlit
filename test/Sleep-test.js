@@ -20,16 +20,14 @@ describe('Sleep', () => {
     expect(sleep.sleepData).to.deep.equal(sleepData);
   });
 
-  it.skip('should find a user\'s average hours slept per day', () => {
+  it('should find a user\'s average hours slept per day', () => {
 
-    expect(sleep.getUserAverageHoursSlept(1)).to.equal(6.1);
+    expect(sleep.getUserAverageHoursSlept(1)).to.equal(7);
   });
 
   it('should find a user\'s all time average sleep quality', () => {
 
-    expect(sleep.getAverageUserSleepQuality(2)).to.equal(4.7);
-    expect(sleep.getAverageUserSleepQuality(3)).to.equal(4.7);
-    expect(sleep.getAverageUserSleepQuality(1)).to.equal(2.2);
+    expect(sleep.getAverageUserSleepQuality(2)).to.equal(4.8);
   })
 
 
@@ -42,7 +40,7 @@ describe('Sleep', () => {
   it('should show the user their sleep quality for a specific date', () => {
 
     expect(sleep.getSleepQualityByDate(1, "2019/06/15")).to.equal(2.2);
-    expect(sleep.getSleepQualityByDate(2, "2019/06/15")).to.equal(4.7);
+    expect(sleep.getSleepQualityByDate(2, "2019/06/15")).to.equal(5);
   })
 
   it('should show the average sleep quality of all user\'s', () => {
@@ -52,12 +50,12 @@ describe('Sleep', () => {
 
   it('should show hours slept per day over the course of any given week', () => {
 
-    expect(sleep.findWeeklyHoursSlept(1)).to.deep.equal([6.1])
+    expect(sleep.findWeeklyHours(1, "2019/06/25")).to.deep.equal([5.4, 4.1, 9.6, 5.1, 8.1, 8.9, 4.4])
   })
 
   it('should show sleep quality per day over the course of any given week', () => {
 
-    expect(sleep.findWeeklySleepQuality(1)).to.deep.equal([2.2])
+    expect(sleep.findWeeklyQuality(1, "2019/06/25")).to.deep.equal([3, 3.6, 2.9, 2.6, 3.5, 2.2, 1.6])
   })
 
 });
