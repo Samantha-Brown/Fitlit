@@ -17,18 +17,15 @@ class Hydration {
   return this.hydrationData.find(data => data.date === dateSelected).numOunces;
   }
   selectWeek(id, date) {
-    let foundUser = this.findAUser(id); //array of all specific user hydration data
-    let foundUserObj = foundUser.find((user) => user.date === date); // singular object containing inputed date arg
+    let foundUser = this.findAUser(id);
+    let foundUserObj = foundUser.find((user) => user.date === date);
     let selection = foundUser.indexOf(foundUserObj) + 1;
     let foundWeek = foundUser.slice(selection -7, selection);
     return foundWeek;
-    // return foundWeek.map((day) => day.numOunces);
   }
   findWeeklyOunces(id, date) {
     return this.selectWeek(id, date).map((day) => day.numOunces);
   };
 }
-
-
 
 export default Hydration;
