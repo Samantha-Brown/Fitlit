@@ -13,8 +13,8 @@ class Hydration {
     let avgOunces = Math.round(totalOunces/perDayHydration.length)
     return avgOunces;
   }
-  findByDate(dateSelected) {
-  return this.hydrationData.find(data => data.date === dateSelected).numOunces;
+  findByDate(id, dateSelected) {
+    return this.hydrationData.find(data => data.date === dateSelected && data.userID === id).numOunces;
   }
   selectWeek(id, date) {
     let foundUser = this.findAUser(id);

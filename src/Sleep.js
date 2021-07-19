@@ -13,7 +13,7 @@ class Sleep {
     let totalQuality = 0
     let newArr = this.sleepData.filter((sleep) => sleep.userID === id);
     newArr.forEach((sleep) => (totalQuality += sleep.sleepQuality));
-    let avgQuality = totalQuality/newArr.length;
+    let avgQuality = Math.round(totalQuality/newArr.length);
     return avgQuality;
   }
   getAllUserSleepQualityAvg() {
