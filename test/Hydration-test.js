@@ -3,7 +3,7 @@ import Hydration from '../src/Hydration';
 import testData from '../src/data/sampleData';
 
 
-describe('Hydration', () => {
+describe.only('Hydration', () => {
   let hydrationData, hydration;
   beforeEach(() => {
     hydrationData = testData.hydrationDataSample;
@@ -27,14 +27,55 @@ describe('Hydration', () => {
       "numOunces": 373737}])
   });
 
-  //it('should return a user\'s average daily fluid consumption', () => {
+  it('should return a user\'s average daily fluid consumption', () => {
 
-  //   expect(hydration.calcAverageOunces(1)).to.equal(37);
-  // });
+    expect(hydration.calcAverageOunces(1)).to.equal(70);
+  });
 
-//   //it('should return 7 days', () => {
-//
-//     expect(hydration.findWeeklyOunces()).to.deep.equal([75, 47, 37, 75, 47,37, 75]);
-//   })
-//
+  it('should return 7 days', () => {
+
+    expect(hydration.selectWeek(1, "2019/06/23")).to.deep.equal([
+      {
+        "userID": 1,
+        "date": "2019/06/17",
+        "numOunces": 85
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/18",
+        "numOunces": 42
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/19",
+        "numOunces": 87
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/20",
+        "numOunces": 94
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/21",
+        "numOunces": 84
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/22",
+        "numOunces": 39
+      },
+      {
+        "userID": 1,
+        "date": "2019/06/23",
+        "numOunces": 75
+      }
+    ]);
+  });
+
+  it('should show the latest week\'s numOunces data', () => {
+
+    expect(hydration.findWeeklyOunces(1, "2019/06/23")).to.deep.equal([ 85, 42, 87, 94, 84, 39, 75 ])
+  })
+
  });
