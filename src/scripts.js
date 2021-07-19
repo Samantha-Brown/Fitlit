@@ -1,11 +1,12 @@
 import './css/styles.css';
-import {usersData, retrieveSleepData, retrieveActivityData, retrieveHydrationData} from './webApi.js';
+import {retrieveUsersData, retrieveSleepData, retrieveActivityData, retrieveHydrationData} from './webApi.js';
 import UserRepository from './UserRepository';
 import User from './User';
 import Hydration from './Hydration';
 import Sleep from './Sleep';
+// import { grabAndImplementUserData } from './updateDOM.js'
 
-let sleepData, userRepoData, hydrationData, activityData, user;
+let sleepData, userRepoData, hydrationData, user;
 
 const getRandomIndex = () => {return Math.floor(Math.random() * 50)};
 const index = getRandomIndex();
@@ -24,32 +25,34 @@ const forFun = () => {
 }
 
 const grabAndImplementSleepData = () => {
-  let num = sleepData.findAUser(index)
-  console.log(sleepData, '<SLEEPDATA>>>', num, '<NUM>>>')
-  document.getElementById('anotha1').innerText = `${sleepData.getUserAverageHoursSlept(index)}`
+  document.getElementById('latestSleepHours').innerText = `Last Night's Hour's: ${sleepData.getHoursSleptByDate(id, date)}`
+  document.getElementById('latestSleepQuality').innerText = ``
+  document.getElementById('hoursOverWeek').innerText = ``
+  document.getElementById('qualityOverWeek').innerText = ``
+  document.getElementById('averageQuality').innerText = ``
+  document.getElementById('averageHours').innerText = `All Time Average Hours: ${sleepData.getUserAverageHoursSlept(index)}`;
 }
 
 
 //console.log(usersData())
-usersData() // Same as: Promise.then(data =>){}
+retrieveUsersData() // Same as: Promise.then(data =>){}
+// import this function
   .then((data) => {
     userRepoData = new UserRepository(data.userData); //userRepoData is an object!
 
     // console.log(userRepoData.data[20])
     user = new User(userRepoData.data[index])
-    // sleep = new Sleep(user)
     console.log(user, '<>>>>USERRRR');
     grabAndImplementUserData();
   })
-  // .then(grabAndImplementUserData)
 
-// retrieveSleepData()
-//   .then((data) => {
-//     sleepData = new Sleep(data.sleepData);
-//     console.log(sleepData);
-//     grabAndImplementSleepData();
-//   })
-  // .then(grabAndImplementSleepData);
+
+retrieveSleepData()
+  .then((data) => {
+    sleepData = new Sleep(data.sleepData);
+    console.log(sleepData);
+    grabAndImplementSleepData();
+  })
 
 
 
