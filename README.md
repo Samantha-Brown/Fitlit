@@ -39,6 +39,9 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 * The scripts.js file works with all the files to render the page functionality.
 
 ## Illustrations
+
+Insert pics
+
 ## Contributors
 
 * Matt Roden
@@ -57,7 +60,7 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 
 * Getting the Fetch calls connected and trying to make them dynamic.
 * Understanding the scripts.js vs update.Dom.js separation
-* 
+* Taking on such a large project while school and life continued on.  
 
 ## Future Designs/Extensions
 
