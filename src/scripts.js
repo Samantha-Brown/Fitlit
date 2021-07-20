@@ -9,7 +9,8 @@ import Sleep from './Sleep';
 let sleepData, userRepoData, hydrationData, user;
 const date = '2020/01/22';
 
-const getRandomIndex = () => {return Math.floor(Math.random() * 50)};
+const getRandomIndex = () => {
+  return Math.floor(Math.random() * 50)};
 const index = getRandomIndex(); // will be the user ID
 
 

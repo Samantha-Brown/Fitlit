@@ -78,4 +78,4 @@ describe('Hydration', () => {
     expect(hydration.findWeeklyOunces(1, "2019/06/23")).to.deep.equal([ 85, 42, 87, 94, 84, 39, 75 ])
   })
 
- });
+});
