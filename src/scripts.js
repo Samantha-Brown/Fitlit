@@ -1,5 +1,5 @@
 import './css/styles.css';
-import {retrieveUsersData, retrieveSleepData, retrieveActivityData, retrieveHydrationData} from './webApi.js';
+import {retrieveUsersData, retrieveSleepData, retrieveHydrationData} from './webApi.js';
 import UserRepository from './UserRepository';
 import User from './User';
 import Hydration from './Hydration';
@@ -39,7 +39,7 @@ const grabAndImplementHydrationData = () => {
 
 retrieveUsersData()
   .then((data) => {
-    userRepoData = new UserRepository(data.userData); 
+    userRepoData = new UserRepository(data.userData);
     user = new User(userRepoData.data[index])
     console.log(user, '<>>>>USERRRR');
     grabAndImplementUserData();

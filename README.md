@@ -60,7 +60,7 @@ Insert pics
 
 * Getting the Fetch calls connected and trying to make them dynamic.
 * Understanding the scripts.js vs update.Dom.js separation
-* Taking on such a large project while school and life continued on.  
+* Taking on such a large project while school and life continued on. 
 
 ## Future Designs/Extensions
 
