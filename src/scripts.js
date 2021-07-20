@@ -19,6 +19,7 @@ const grabAndImplementUserData = () => {
   document.getElementById('address').innerText = `Address: ${user.address}`;
   document.getElementById('strideLength').innerText = `Stride Length: ${user.strideLength}`;
   document.getElementById('stepGoal').innerText = `Daily Step Goal: ${user.dailyStepGoal}`;
+  document.getElementById('friends').innerText = `${userRepoData.getUserFriendsNames(index)}`
 };
 
 const grabAndImplementSleepData = () => {
@@ -46,7 +47,7 @@ retrieveUsersData() // Same as: Promise.then(data =>){}
 retrieveSleepData()
   .then((data) => {
     sleepData = new Sleep(data.sleepData);
-    console.log(sleepData. '<<>>SLEEPDATA<<>>')
+    console.log(sleepData, '<<>>SLEEPDATA<<>>')
     console.log(sleepData);
     grabAndImplementSleepData();
   });
