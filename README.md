@@ -35,3 +35,8 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 ## Wins
 ## Challenges
 ## Future Designs/Extensions
+
+* Add images and more color to the webpage to be more attractive to users
+* Add the Activity Iteration of the spec
+* Use chart.js library to display the data
+* Design a step challenge between user's friends
