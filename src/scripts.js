@@ -4,7 +4,7 @@ import UserRepository from './UserRepository';
 import User from './User';
 import Hydration from './Hydration';
 import Sleep from './Sleep';
-// import { grabAndImplementUserData } from './updateDOM.js'
+
 
 let sleepData, userRepoData, hydrationData, user;
 const date = '2020/01/22';
