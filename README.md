@@ -24,6 +24,9 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 * HTML
 * CSS
 * jQuery
+* Git
+* GitHub
+* Miro
 
 ## Setup
 
@@ -40,7 +43,7 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 
 ## Illustrations
 
-Insert pics
+![gif of app](https://res.cloudinary.com/yoroden/image/upload/v1626820770/recording_theizy.gif)
 
 ## Contributors
 
