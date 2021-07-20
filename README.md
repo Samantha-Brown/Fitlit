@@ -16,6 +16,15 @@ Mod 2 - Paired Project
 The Fitlit paired project is designed for Module 2 students in the Front End Program at the Turing School of Software Design. The project focuses on building an application implementing the ES6 syntax and using Test-driven-development(TDD) for each class and method as well. We were tasked with writing dry code using array-prototype methods and working with Fetched data for the first time. The final piece was tying all of the files together and having a page design that easily shows a given user's data on the page.
 
 ## Technologies
+
+* Node.js
+* JavaScript
+* Mocha
+* Chai
+* HTML
+* CSS
+* jQuery
+
 ## Code Architecture  
 ## Illustrations
 ## Contributors
