@@ -2,7 +2,7 @@
 
 Mod 2 - Paired Project
 
-## Goals
+## Goals (from the project spec)
 
 * Implement ES6 classes that communicate to each other as needed
 * Use object and array prototype methods to perform data manipulation
@@ -12,6 +12,9 @@ Mod 2 - Paired Project
 * Make network requests to API endpoints to retrieve and manipulate data
 
 ## Abstract
+
+The Fitlit paired project is designed for Module 2 students in the Front End Program at the Turing School of Software Design. The project focuses on building an application implementing the ES6 syntax and using Test-driven-development(TDD) for each class and method as well. We were tasked with writing dry code using array-prototype methods and working with Fetched data for the first time. The final piece was tying all of the files together and having a page design that easily shows a given user's data on the page.
+
 ## Technologies
 ## Code Architecture  
 ## Illustrations
@@ -22,4 +25,4 @@ Mod 2 - Paired Project
 
 ## Wins
 ## Challenges
-## Future Possible Features
+## Future Designs/Extensions
