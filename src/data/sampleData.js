@@ -9,7 +9,6 @@ const testData = {
           "strideLength": 4.3,
           "dailyStepGoal": 10000,
           "friends": [
-            16,
             4,
             8
           ]
