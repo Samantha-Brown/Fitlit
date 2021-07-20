@@ -21,3 +21,4 @@ const index = getRandomIndex();
 //   document.getElementById('strideLength').innerText = `Stride Length: ${user.strideLength}`;
 //   document.getElementById('stepGoal').innerText = `Daily Step Goal: ${user.dailyStepGoal}`;
 // })
+// 
