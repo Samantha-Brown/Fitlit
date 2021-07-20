@@ -9,7 +9,7 @@ class UserRepository {
   getAverageStepGoal() {
     let goals = 0;
     this.data.forEach((user) => goals += user.dailyStepGoal)
-    return Math.round(goals/this.data.length);
+    return Math.round(goals / this.data.length);
   }
   findAUser(id) {
     return this.userData.filter(aUser => aUser.userID === id);

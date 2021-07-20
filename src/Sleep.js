@@ -6,21 +6,21 @@ class Sleep {
     let totalHours = 0
     let newArr = this.sleepData.filter((sleep) => sleep.userID === id);
     newArr.forEach((sleep) => (totalHours += sleep.hoursSlept));
-    let avgHours = Math.round(totalHours/newArr.length)
+    let avgHours = Math.round(totalHours / newArr.length)
     return avgHours;
   }
   getAverageUserSleepQuality(id) {
     let totalQuality = 0
     let newArr = this.sleepData.filter((sleep) => sleep.userID === id);
     newArr.forEach((sleep) => (totalQuality += sleep.sleepQuality));
-    let avgQuality = Math.round(totalQuality/newArr.length);
+    let avgQuality = Math.round(totalQuality / newArr.length);
     return avgQuality;
   }
   getAllUserSleepQualityAvg() {
     let totalQuality = 0;
     let newArr = this.sleepData.filter((sleep) => sleep.userID);
     newArr.forEach((sleep) => (totalQuality += sleep.sleepQuality));
-    let avgQuality = Math.round(totalQuality/newArr.length);
+    let avgQuality = Math.round(totalQuality / newArr.length);
     return avgQuality;
   }
   getHoursSleptByDate(id, date) {
@@ -38,7 +38,7 @@ class Sleep {
     let foundUser = this.findAUser(id);
     let foundUserObj = foundUser.find((user) => user.date === date);
     let selection = foundUser.indexOf(foundUserObj) + 1;
-    let foundWeek = foundUser.slice(selection -7, selection);
+    let foundWeek = foundUser.slice(selection - 7, selection);
     return foundWeek;
   }
   findWeeklyHours(id, date) {
