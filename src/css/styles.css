@@ -16,31 +16,48 @@ body, html {
 header {
   grid-area: header;
   width: 100%;
-  height: 10em;
+  height: 5em;
   display: flex;
   justify-content: center;
+}
+
+h1, h3 {
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
 }
 
 main {
   grid-area: main;
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
+
 }
 
-@media screen (max-width: 500px){
+@media screen and (max-width: 500px){
   main {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: repeat(4, 1fr);
+    margin: 0 ;
+    grid-gap: 5px;
+    grid-template-areas:
+    'userCard userCard userCard userCard'
+    'friendsCard friendsCard friendsCard friendsCard'
+    'hydroCard hydroCard hydroCard hydroCard'
+    'sleepCard sleepCard sleepCard sleepCard'
   }
 
   .card {
-    width: 350px;
+    width: 300px;
     height: 400px;
   }
 }
-
 .card-wrapper {
   margin-top: 20px;
   display: flex;
@@ -50,7 +67,7 @@ main {
 }
 
 .card {
-  //border: solid 2px black;
+  /* border: solid 2px black; */
   height: 300px;
   width: 350px;
   margin: 10px;
@@ -58,6 +75,7 @@ main {
 }
 
 .user-card {
+  grid-area: userCard;
   border-radius: 0px;
   background: #ffffff;
   box-shadow:  -26px 26px 52px #cfcfcf,
@@ -65,6 +83,7 @@ main {
 }
 
 .hydration-card {
+  grid-area: hydroCard;
   border-radius: 0px;
   background: #ffffff;
   box-shadow:  -26px 26px 52px #cfcfcf,
@@ -72,6 +91,7 @@ main {
 }
 
 .sleep-card {
+  grid-area: sleepCard;
   border-radius: 0px;
   background: #ffffff;
   box-shadow:  -26px 26px 52px #cfcfcf,
@@ -79,6 +99,7 @@ main {
 }
 
 .friends-card {
+  grid-area: friendsCard;
   border-radius: 0px;
   background: #ffffff;
   box-shadow:  -26px 26px 52px #cfcfcf,
