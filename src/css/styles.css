@@ -58,50 +58,38 @@ main {
     height: 400px;
   }
 }
+
 .card-wrapper {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow:  -26px 26px 52px #cfcfcf,
+               26px -26px 52px #ffffff;
 }
 
 .card {
-  /* border: solid 2px black; */
   height: 300px;
   width: 350px;
   margin: 10px;
-  border-radius: 2px;
 }
 
 .user-card {
   grid-area: userCard;
-  border-radius: 0px;
-  background: #ffffff;
-  box-shadow:  -26px 26px 52px #cfcfcf,
-               26px -26px 52px #ffffff;
+
 }
 
 .hydration-card {
   grid-area: hydroCard;
-  border-radius: 0px;
-  background: #ffffff;
-  box-shadow:  -26px 26px 52px #cfcfcf,
-               26px -26px 52px #ffffff;
 }
 
 .sleep-card {
   grid-area: sleepCard;
-  border-radius: 0px;
-  background: #ffffff;
-  box-shadow:  -26px 26px 52px #cfcfcf,
-               26px -26px 52px #ffffff;
 }
 
 .friends-card {
   grid-area: friendsCard;
-  border-radius: 0px;
-  background: #ffffff;
-  box-shadow:  -26px 26px 52px #cfcfcf,
-               26px -26px 52px #ffffff;
 }
