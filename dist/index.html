@@ -1,33 +1,39 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>Activity Tracker</title>
   </head>
   <body>
     <header>
-      <h1>Fitlit</h1>
+      <h1>FitLit</h1>
     </header>
     <main>
-      <div class="card-wrapper">
-        <h3>User Info</h3>
+      <div class="card-wrapper user-card">
+        <h3 class="title">User Info</h3>
         <div class="card">
-          <p id="welcomeMessage">Welcome, </p>
+          <p id="welcomeMessage" class="welcome">Welcome, </p>
           <p id="email">Email: </p>
           <p id="address">Address: </p>
           <p id="strideLength">Stride Length: </p>
           <p id="stepGoal">Step Goal: </p>
         </div>
       </div>
-      <div class="card-wrapper">
-        <h3>Hydration Info</h3>
+      <div class="card-wrapper hydration-card">
+        <h3 class="title">Hydration Info</h3>
         <div class="card">
           <p id="todaysWater">Today's Water: </p>
           <p id="weekOfWater">This week's water consumed: </p>
         </div>
       </div>
-      <div class="card-wrapper">
-        <h3>Sleep Info</h3>
+      <div class="card-wrapper sleep-card">
+        <h3 class="title">Sleep Info</h3>
         <div class="card">
           <p id="latestSleepHours">Hours slept last night: </p>
           <p id="latestSleepQuality">Last night's sleep quality: </p>
@@ -37,8 +43,8 @@
           <p id="averageQuality">Average quality: </p>
         </div>
       </div>
-      <div class="card-wrapper">
-        <h3>Friends</h3>
+      <div class="card-wrapper friends-card">
+        <h3 class="title">Friends</h3>
         <div class="card">
           <p id="friends">Your friends: </p>
         </div>

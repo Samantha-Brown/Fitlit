@@ -42,10 +42,10 @@ class Sleep {
     return foundWeek;
   }
   findWeeklyHours(id, date) {
-    return this.selectWeek(id, date).map((day) => day.hoursSlept);
+    return this.selectWeek(id, date).map((day) => day.hoursSlept).join(' hours, ');
   }
   findWeeklyQuality(id, date) {
-    return this.selectWeek(id, date).map((day) => day.sleepQuality);
+    return this.selectWeek(id, date).map((day) => day.sleepQuality).join(', ');
   }
 }
 
