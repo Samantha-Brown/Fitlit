@@ -25,6 +25,12 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 * CSS
 * jQuery
 
+## Setup
+
+1. Fork this repo (look up in the top right corner) and copy the SSH link.
+2. Open your terminal, run git clone (replace the [ ] with the copied remote address.
+3. Change into the directory and type the following to view page: src/open index.html
+
 ## Code Architecture  
 ## Illustrations
 ## Contributors
