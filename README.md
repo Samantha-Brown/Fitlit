@@ -17,7 +17,7 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 
 ## Technologies
 
-* Node.js
+* NPM package/Webpack
 * JavaScript
 * Mocha
 * Chai
@@ -46,14 +46,18 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 
 ## Wins
 
-* Getting the Fetch data to work after hours of research and working with
-  mentors, rocks, and classmates.
-*
-
+* Keeping organized as a team on the project and where we are at in each step along the way using Github Projects
+* Writing functional ES6 classes that all communicate and complete the MVP for the project
+* Learning some new tools such as MIRO for project planning and wire framing
+* Sticking to DTR and supporting one another in making sure to get other work done outside of the project
+* Getting the Fetch data to work after hours of research and working with mentors, rocks, and classmates.
+* Writing the class methods and test-driven-development easier than any other project so far.
 
 ## Challenges
 
-*
+* Getting the Fetch calls connected and trying to make them dynamic.
+* Understanding the scripts.js vs update.Dom.js separation
+* 
 
 ## Future Designs/Extensions
 
