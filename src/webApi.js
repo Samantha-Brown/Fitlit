@@ -8,10 +8,10 @@ export function retrieveSleepData() {
     .then(response => response.json())
 }
 
-export function retrieveActivityData() {
-  return fetch('http://localhost:3001/api/v1/activity')
-    .then(response => response.json())
-}
+// export function retrieveActivityData() {
+//   return fetch('http://localhost:3001/api/v1/activity')
+//     .then(response => response.json())
+// } 
 
 export function retrieveHydrationData() {
   return fetch('http://localhost:3001/api/v1/hydration')

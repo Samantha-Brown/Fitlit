@@ -63,7 +63,7 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 
 * Getting the Fetch calls connected and trying to make them dynamic.
 * Understanding the scripts.js vs update.Dom.js separation
-* Taking on such a large project while school and life continued on.  
+* Taking on such a large project while school and life continued on. 
 
 ## Future Designs/Extensions
 

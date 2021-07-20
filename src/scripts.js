@@ -1,17 +1,18 @@
 import './css/styles.css';
-import {retrieveUsersData, retrieveSleepData, retrieveActivityData, retrieveHydrationData} from './webApi.js';
+import {retrieveUsersData, retrieveSleepData, retrieveHydrationData} from './webApi.js';
 import UserRepository from './UserRepository';
 import User from './User';
 import Hydration from './Hydration';
 import Sleep from './Sleep';
-// import { grabAndImplementUserData } from './updateDOM.js'
+
 
 let sleepData, userRepoData, hydrationData, user;
 const date = '2020/01/22';
 
 const getRandomIndex = () => {
-  return Math.floor(Math.random() * 50)};
-const index = getRandomIndex(); // will be the user ID
+  return Math.floor(Math.random() * 50)
+};
+const index = getRandomIndex();
 
 
 const grabAndImplementUserData = () => {
@@ -37,9 +38,9 @@ const grabAndImplementHydrationData = () => {
   document.getElementById('weekOfWater').innerText = `This week's water: ${hydrationData.findWeeklyOunces(index, date)}`;
 }
 
-retrieveUsersData() // Same as: Promise.then(data =>){}
+retrieveUsersData()
   .then((data) => {
-    userRepoData = new UserRepository(data.userData); //userRepoData is an object!
+    userRepoData = new UserRepository(data.userData);
     user = new User(userRepoData.data[index])
     console.log(user, '<>>>>USERRRR');
     grabAndImplementUserData();
@@ -53,7 +54,7 @@ retrieveSleepData()
     grabAndImplementSleepData();
   });
 
-  retrieveHydrationData()
+retrieveHydrationData()
   .then((data) => {
     hydrationData = new Hydration(data.hydrationData);
     console.log(hydrationData, "<<<<<HERE>>>>>>");
