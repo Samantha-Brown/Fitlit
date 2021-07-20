@@ -54,7 +54,7 @@ retrieveSleepData()
     grabAndImplementSleepData();
   });
 
-  retrieveHydrationData()
+retrieveHydrationData()
   .then((data) => {
     hydrationData = new Hydration(data.hydrationData);
     console.log(hydrationData, "<<<<<HERE>>>>>>");
