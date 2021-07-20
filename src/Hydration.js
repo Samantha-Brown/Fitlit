@@ -24,7 +24,7 @@ class Hydration {
     return foundWeek;
   }
   findWeeklyOunces(id, date) {
-    return this.selectWeek(id, date).map((day) => day.numOunces);
+    return this.selectWeek(id, date).map((day) => day.numOunces).join(' ounces, ');
   }
 }
 
