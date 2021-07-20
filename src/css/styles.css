@@ -1,12 +1,20 @@
 body, html {
-/* background-image: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #fecfef 100%); */
-  /* background-repeat: no-repeat; */
   margin: 0;
   padding: 0;
   height: 100%;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  margin: 0 auto;
+  grid-gap: 15px;
+  grid-template-areas:
+    "header header header header"
+    "main main main main";
 }
 
 header {
+  grid-area: header;
   background-color: purple;
   width: 100%;
   height: 5em;
@@ -15,11 +23,27 @@ header {
 }
 
 main {
+  grid-area: main;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media screen (max-width: 500px){
+  main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card {
+    width: 350px;
+    height: 400px;
+  }
 }
 
 .card-wrapper {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,7 +51,37 @@ main {
 }
 
 .card {
-  border: solid 2px green;
+  //border: solid 2px black;
   height: 300px;
-  width: 225px;
+  width: 350px;
+  margin: 10px;
+  border-radius: 2px;
+}
+
+.user-card {
+  border-radius: 0px;
+  background: #ffffff;
+  box-shadow:  -26px 26px 52px #cfcfcf,
+               26px -26px 52px #ffffff;
+}
+
+.hydration-card {
+  border-radius: 0px;
+  background: #ffffff;
+  box-shadow:  -26px 26px 52px #cfcfcf,
+               26px -26px 52px #ffffff;
+}
+
+.sleep-card {
+  border-radius: 0px;
+  background: #ffffff;
+  box-shadow:  -26px 26px 52px #cfcfcf,
+               26px -26px 52px #ffffff;
+}
+
+.friends-card {
+  border-radius: 0px;
+  background: #ffffff;
+  box-shadow:  -26px 26px 52px #cfcfcf,
+               26px -26px 52px #ffffff;
 }
