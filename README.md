@@ -29,9 +29,15 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 
 1. Fork this repo (look up in the top right corner) and copy the SSH link.
 2. Open your terminal, run git clone (replace the [ ] with the copied remote address.
-3. Change into the directory and type the following to view page: src/open index.html
+3. Change into the directory and type the following to view page:
+   run npm install and then src/open index.html
 
 ## Code Architecture  
+
+* The src directory contains the classes and the testing files are in the test directory.
+* The Fetch calls are contained in the webApi.js
+* The scripts.js file works with all the files to render the page functionality.
+
 ## Illustrations
 ## Contributors
 
@@ -39,7 +45,16 @@ The Fitlit paired project is designed for Module 2 students in the Front End Pro
 * Samantha Brown
 
 ## Wins
+
+* Getting the Fetch data to work after hours of research and working with
+  mentors, rocks, and classmates.
+*
+
+
 ## Challenges
+
+*
+
 ## Future Designs/Extensions
 
 * Add images and more color to the webpage to be more attractive to users
