@@ -19,7 +19,7 @@ const grabAndImplementUserData = () => {
   document.getElementById('address').innerText = `Address: ${user.address}`;
   document.getElementById('strideLength').innerText = `Stride Length: ${user.strideLength}`;
   document.getElementById('stepGoal').innerText = `Daily Step Goal: ${user.dailyStepGoal}`;
-  document.getElementById('friends').innerText = `${userRepoData.getUserFriendsNames(index)}`
+  document.getElementById('friends').innerText = `${userRepoData.getUserFriendsNames(index)}`;
 };
 
 const grabAndImplementSleepData = () => {
