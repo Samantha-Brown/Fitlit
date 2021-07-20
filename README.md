@@ -1,82 +1,70 @@
-# FitLit Starter Kit
+# FitLit
 
-The details of this project are outline in [this project spec](http://frontend.turing.io/projects/fitlit.html).
+Mod 2 - Paired Project
+
+## Goals (from the project spec)
+
+* Implement ES6 classes that communicate to each other as needed
+* Use object and array prototype methods to perform data manipulation
+* Create a dashboard that is easy to use and displays information in a clear way on multiple screens
+* Write modular, reusable code that follows SRP (Single Responsibility Principle)
+* Implement a robust testing suite using TDD
+* Make network requests to API endpoints to retrieve and manipulate data
+
+## Abstract
+
+The Fitlit paired project is designed for Module 2 students in the Front End Program at the Turing School of Software Design. The project focuses on building an application implementing the ES6 syntax and using Test-driven-development(TDD) for each class and method as well. We were tasked with writing dry code using array-prototype methods and working with Fetched data for the first time. The final piece was tying all of the files together and having a page design that easily shows a given user's data on the page.
+
+## Technologies
+
+* NPM package/Webpack
+* JavaScript
+* Mocha
+* Chai
+* HTML
+* CSS
+* jQuery
 
 ## Setup
 
-1. Within your group, decide on one person to have the project repository (repo) on their GitHub account. Then, that person should fork this repo - on the top right corner of this page, click the **Fork** button.
-1. Both memebers of the group should clone down the _forked_ repo. Since you don't want to name your project "activity-tracker-starter", you can use an optional argument when you run git clone (you replace the [...] with the terminal command arguments): `git clone [remote-address] [what you want to name the repo]`
-1. Once you have cloned the repo, change into the directory and install the project dependencies. Run `npm install` to install project dependencies.
-1. Run `npm start` in the terminal to see the HTML page (you should see some boilerplate HTML displayed on the page)
-1. Make sure both members of your team are collaborators on the forked repo.
+1. Fork this repo (look up in the top right corner) and copy the SSH link.
+2. Open your terminal, run git clone (replace the [ ] with the copied remote address.
+3. Change into the directory and type the following to view page:
+   run npm install and then src/open index.html
 
-## Testing
+## Code Architecture  
 
-There is no boilerplate for testing in this starter-kit repo. You will need to set this up yourself. However, if you ran `npm install`, then the tooling you need to start testing is already installed (`mocha` and `chai`).
+* The src directory contains the classes and the testing files are in the test directory.
+* The Fetch calls are contained in the webApi.js
+* The scripts.js file works with all the files to render the page functionality.
 
-## Linting Your Code
+## Illustrations
 
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit, but that's ok - the linter is still running successfully.
+Insert pics
 
-Your linter will look only at the JavaScript files you have within the `src` and the `test` directories.
+## Contributors
 
-## Data Model
+* Matt Roden
+* Samantha Brown
 
-**Users**
+## Wins
 
-```
-[
-  {
-    "id": [number],
-    "name": [string],
-    "address": [string],
-    "email": [string],
-    "strideLength": [number - feet],
-    "dailyStepGoal": [number - steps],
-    "friends": [array - one-way connection to other user(s)]
-  },
-  ...more user data
-]
-```
+* Keeping organized as a team on the project and where we are at in each step along the way using Github Projects
+* Writing functional ES6 classes that all communicate and complete the MVP for the project
+* Learning some new tools such as MIRO for project planning and wire framing
+* Sticking to DTR and supporting one another in making sure to get other work done outside of the project
+* Getting the Fetch data to work after hours of research and working with mentors, rocks, and classmates.
+* Writing the class methods and test-driven-development easier than any other project so far.
 
-**Activity**
+## Challenges
 
-```
-[
-  {
-    "userID": [number],
-    "date": [string YYYY/MM/DD],
-    "numSteps": [number - steps],
-    "minutesActive": [number - minutes],
-    "flightsOfStairs": [number - flights]
-  },
-  ...more activity data
-]
-```
+* Getting the Fetch calls connected and trying to make them dynamic.
+* Understanding the scripts.js vs update.Dom.js separation
+* Taking on such a large project while school and life continued on.  
 
-**Hydration**
+## Future Designs/Extensions
 
-```
-[
-  {
-    "userID": [number],
-    "date": [string YYYY/MM/DD],
-    "numOunces": [number - ounces]
-  },
-  ...more hydration data
-]
-```
-
-**Sleep**
-
-```
-[
-  {
-    "userID": [number],
-    "date": [string YYYY/MM/DD],
-    "hoursSlept": [number - hours],
-    "sleepQuality": [number - unitless]
-  },
-  ...more sleep data
-]
-```
+* Add images and more color to the webpage to be more attractive to users
+* Add the Activity Iteration of the spec
+* Use chart.js library to display the data
+* Design a step challenge between user's friends
