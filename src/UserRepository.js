@@ -16,6 +16,14 @@ class UserRepository {
   findAUser(id) {
     return this.userData.filter(aUser => aUser.userID === id);
   }
+  getUserFriendsNames(id) {
+    let friendsNames = [];
+    let user = this.getUserData(id);
+    user.friends.forEach((friendID) => {
+      friendsNames.push(this.getUserData(friendID).name)
+    })
+    return friendsNames;
+  }
 }
 
 export default UserRepository;
