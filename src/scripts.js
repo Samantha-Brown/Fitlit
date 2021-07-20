@@ -11,7 +11,7 @@ const date = '2020/01/22';
 
 const getRandomIndex = () => {
   return Math.floor(Math.random() * 50)};
-const index = getRandomIndex(); // will be the user ID
+const index = getRandomIndex();
 
 
 const grabAndImplementUserData = () => {
@@ -37,9 +37,9 @@ const grabAndImplementHydrationData = () => {
   document.getElementById('weekOfWater').innerText = `This week's water: ${hydrationData.findWeeklyOunces(index, date)}`;
 }
 
-retrieveUsersData() // Same as: Promise.then(data =>){}
+retrieveUsersData()
   .then((data) => {
-    userRepoData = new UserRepository(data.userData); //userRepoData is an object!
+    userRepoData = new UserRepository(data.userData); 
     user = new User(userRepoData.data[index])
     console.log(user, '<>>>>USERRRR');
     grabAndImplementUserData();
