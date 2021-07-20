@@ -115,5 +115,4 @@ describe('Sleep', () => {
 
     expect(sleep.findWeeklyQuality(1, "2019/06/25")).to.deep.equal([3, 3.6, 2.9, 2.6, 3.5, 2.2, 1.6])
   })
-
 });

@@ -10,7 +10,8 @@ let sleepData, userRepoData, hydrationData, user;
 const date = '2020/01/22';
 
 const getRandomIndex = () => {
-  return Math.floor(Math.random() * 50)};
+  return Math.floor(Math.random() * 50)
+};
 const index = getRandomIndex();
 
 
