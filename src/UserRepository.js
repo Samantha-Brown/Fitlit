@@ -20,7 +20,7 @@ class UserRepository {
     user.friends.forEach((friendID) => {
       friendsNames.push(this.getUserData(friendID).name)
     })
-    return friendsNames;
+    return friendsNames.join(', ');
   }
 }
 
