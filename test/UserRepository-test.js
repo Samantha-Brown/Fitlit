@@ -33,6 +33,6 @@ describe('User Repository', () => {
   })
 
   it('should return a user\'s friends by name', () => {
-    expect(repo.getUserFriendsNames(1)).to.deep.equal(["Mae Connelly", "Laney Abshire"]);
+    expect(repo.getUserFriendsNames(1)).to.deep.equal('Mae Connelly, Laney Abshire');
   })
 });

@@ -51,7 +51,7 @@ describe('User', () => {
 
   it('should store the friends of the user', () => {
 
-    expect(pageUser.friends).to.deep.equal([16, 4, 8]);
+    expect(pageUser.friends).to.deep.equal([4, 8]);
   });
 
   it('should return a user\'s first name only', () => {

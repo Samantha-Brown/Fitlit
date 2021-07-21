@@ -108,11 +108,11 @@ describe('Sleep', () => {
 
   it('should show hours slept per day over the course of any given week', () => {
 
-    expect(sleep.findWeeklyHours(1, "2019/06/25")).to.deep.equal([5.4, 4.1, 9.6, 5.1, 8.1, 8.9, 4.4])
+    expect(sleep.findWeeklyHours(1, "2019/06/25")).to.deep.equal('5.4 hours, 4.1 hours, 9.6 hours, 5.1 hours, 8.1 hours, 8.9 hours, 4.4')
   })
 
   it('should show sleep quality per day over the course of any given week', () => {
 
-    expect(sleep.findWeeklyQuality(1, "2019/06/25")).to.deep.equal([3, 3.6, 2.9, 2.6, 3.5, 2.2, 1.6])
+    expect(sleep.findWeeklyQuality(1, "2019/06/25")).to.deep.equal('3, 3.6, 2.9, 2.6, 3.5, 2.2, 1.6')
   })
 });
