@@ -75,7 +75,7 @@ describe('Hydration', () => {
 
   it('should show the latest week\'s numOunces data', () => {
 
-    expect(hydration.findWeeklyOunces(1, "2019/06/23")).to.deep.equal([ 85, 42, 87, 94, 84, 39, 75 ])
+    expect(hydration.findWeeklyOunces(1, "2019/06/23")).to.deep.equal('85 ounces, 42 ounces, 87 ounces, 94 ounces, 84 ounces, 39 ounces, 75')
   })
 
 });
