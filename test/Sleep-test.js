@@ -27,7 +27,7 @@ describe('Sleep', () => {
 
   it('should find a user\'s all time average sleep quality', () => {
 
-    expect(sleep.getAverageUserSleepQuality(2)).to.equal(4.8);
+    expect(sleep.getAverageUserSleepQuality(2)).to.equal(5);
   })
 
 
