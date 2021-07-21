@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import UserRepository from '../src/UserRepository';
 import testData from '../src/data/sampleData';
 
-describe.only('User Repository', () => {
+describe('User Repository', () => {
   let userRepoData, repo;
   beforeEach(() => {
     userRepoData = testData.userDataSample;
@@ -33,6 +33,6 @@ describe.only('User Repository', () => {
   })
 
   it('should return a user\'s friends by name', () => {
-    expect(repo.getUserFriendsNames(1)).to.deep.equal(["Mae Connelly", "Laney Abshire"]);
+    expect(repo.getUserFriendsNames(1)).to.deep.equal('Mae Connelly, Laney Abshire');
   })
 });
